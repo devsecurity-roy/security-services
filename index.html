@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lù Văn Thái - Security & Web Freelance Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#0a0f1d',
+                        cybercard: '#131b2e',
+                        cyberborder: '#1e293b',
+                        cybercyan: '#06b6d4',
+                        cybergreen: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+            border-color: rgba(6, 182, 212, 0.5);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-cyberdark text-slate-100 font-sans antialiased selection:bg-cybercyan selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-cyberdark/80 backdrop-blur-md border-b border-cyberborder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cybercyan to-cybergreen flex items-center justify-center text-cyberdark font-black text-xl shadow-lg">
+                    T
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-wide text-white">Lù Văn Thái</span>
+                    <span class="block text-xs text-cybercyan font-mono">&lt;Security & Web Dev/&gt;</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-cybercyan transition">Dịch vụ</a>
+                <a href="#calculator" class="hover:text-cybercyan transition">Báo giá nhanh</a>
+                <a href="#about" class="hover:text-cybercyan transition">Về tôi</a>
+                <a href="#contact" class="hover:text-cybercyan transition">Liên hệ</a>
+            </nav>
+            <div>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-cybercyan/10 border border-cybercyan/40 text-cybercyan hover:bg-cybercyan hover:text-black font-medium text-sm transition duration-300">
+                    Thuê dịch vụ ngay
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cybercyan/10 border border-cybercyan/30 text-cybercyan text-xs font-mono mb-6">
+                <span class="w-2 h-2 rounded-full bg-cybercyan animate-pulse"></span>
+                <span>Sẵn sàng nhận dự án mới</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+                Giải pháp <span class="text-transparent bg-clip-text bg-gradient-to-r from-cybercyan to-cybergreen text-glow">Bảo mật Website</span> & Lập trình Chuyên nghiệp
+            </h1>
+            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+                Chuyên rà soát lỗ hổng, xử lý mã độc, cấu hình bảo mật hệ thống web và phát triển các công cụ tự động hóa theo yêu cầu.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold hover:opacity-90 transition shadow-lg shadow-cybercyan/20">
+                    Khám phá Dịch vụ
+                </a>
+                <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-cybercard border border-cyberborder hover:border-cybercyan text-white font-medium transition">
+                    Tính giá dịch vụ trực tuyến
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 border-t border-cyberborder bg-cybercard/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Các Gói Dịch Vụ Cung Cấp</h2>
+                <p class="text-slate-400">Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.</p>
+                
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button onclick="filterService('all')" class="filter-btn active-tab px-4 py-2 rounded-lg text-sm font-medium bg-cybercyan text-black transition">Tất cả</button>
+                    <button onclick="filterService('sec')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Bảo mật & Kiểm thử</button>
+                    <button onclick="filterService('web')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Lập trình & Sửa lỗi</button>
+                    <button onclick="filterService('auto')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Script & Tự động hóa</button>
+                </div>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="service-grid">
+                
+                <!-- Item 1 -->
+                <div class="service-card sec bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cybercyan/10 border border-cybercyan/30 flex items-center justify-center text-cybercyan text-xl mb-6">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Rà soát Lỗ hổng Website</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Quét toàn diện các lỗi OWASP Top 10 phổ biến (XSS, SQLi cơ bản, cấu hình sai file/header) và gửi báo cáo hướng dẫn fix lỗi.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 2-3 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 500.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Rà soát Lỗ hổng Website', 500000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="service-card sec bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-xl mb-6">
+                            <i class="fa-solid fa-bug-slash"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Gỡ Malware & Cấu hình WAF</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Tìm và xóa bỏ webshell, mã độc chèn trái phép trên mã nguồn WordPress/PHP. Cấu hình Cloudflare WAF chống bot độc hại.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1-2 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 400.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Gỡ Malware & Cấu hình WAF', 400000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="service-card sec bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cybergreen/10 border border-cybergreen/30 flex items-center justify-center text-cybergreen text-xl mb-6">
+                            <i class="fa-solid fa-envelope-circle-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Cấu hình DNS & Security Headers</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Thiết lập bản ghi SPF, DKIM, DMARC chống giả mạo email và cấu hình đầy đủ HTTP Security Headers chuẩn bảo mật cao.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 300.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Cấu hình DNS & Security Headers', 300000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="service-card web bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-6">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Sửa lỗi Web & Fix Bug</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Khắc phục lỗi giao diện (CSS/Responsive), xử lý lỗi logic JavaScript trên trình duyệt hoặc sửa lỗi xử lý form PHP cơ bản.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: Nhanh trong ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 200.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Sửa lỗi Web & Fix Bug', 200000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="service-card auto bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-6">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Viết Script Tự động hóa</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Lập trình Python script cào dữ liệu web (Web Scraping) hoặc tạo bot Telegram/Discord thông báo sự kiện, giám sát hệ thống.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 2-4 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 400.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Viết Script Tự động hóa', 400000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="service-card sec bg-cybercard border border-cyberborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-6">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Phân tích File Log Website</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Đọc và phân tích file log (Apache/Nginx access log) để lọc ra các IP có hành vi tấn công, rà quét hoặc brute-force hệ thống.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
+                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono">Từ 300.000đ</span>
+                        </div>
+                        <button onclick="selectPackage('Phân tích File Log Website', 300000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                            Chọn dịch vụ này
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Price Calculator -->
+    <section id="calculator" class="py-20 border-t border-cyberborder">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-cybercard border border-cyberborder rounded-3xl p-8 lg:p-12 glow-effect">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl font-bold mb-2">Tính toán Chi phí & Đặt lịch</h2>
+                    <p class="text-slate-400 text-sm">Tùy chọn gói dịch vụ và các yêu cầu đi kèm để ước tính chi phí sơ bộ.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">1. Chọn dịch vụ chính</label>
+                        <select id="calc-service" onchange="calculateTotal()" class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none">
+                            <option value="500000" data-name="Rà soát Lỗ hổng Website">Rà soát Lỗ hổng Website (500.000đ)</option>
+                            <option value="400000" data-name="Gỡ Malware & Cấu hình WAF">Gỡ Malware & Cấu hình WAF (400.000đ)</option>
+                            <option value="300000" data-name="Cấu hình DNS & Security Headers">Cấu hình DNS & Security Headers (300.000đ)</option>
+                            <option value="200000" data-name="Sửa lỗi Web & Fix Bug">Sửa lỗi Web & Fix Bug (200.000đ)</option>
+                            <option value="400000" data-name="Viết Script Tự động hóa">Viết Script Tự động hóa (400.000đ)</option>
+                            <option value="300000" data-name="Phân tích File Log Website">Phân tích File Log Website (300.000đ)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">2. Yêu cầu thêm (Tùy chọn)</label>
+                        <div class="space-y-3 pt-1">
+                            <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
+                                <input type="checkbox" id="opt-urgent" value="200000" onchange="calculateTotal()" class="w-4 h-4 rounded border-cyberborder text-cybercyan focus:ring-cybercyan bg-cyberdark">
+                                <span>Làm gấp trong 24h (+200.000đ)</span>
+                            </label>
+                            <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
+                                <input type="checkbox" id="opt-report" value="150000" onchange="calculateTotal()" class="w-4 h-4 rounded border-cyberborder text-cybercyan focus:ring-cybercyan bg-cyberdark">
+                                <span>Báo cáo kỹ thuật chi tiết kèm hình ảnh (+150.000đ)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cyberdark border border-cyberborder rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs text-slate-400 block mb-1 font-mono">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
+                        <span id="total-price" class="text-3xl font-black text-cybercyan font-mono">500.000đ</span>
+                    </div>
+                    <a href="#contact" onclick="transferDataToContact()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-center hover:opacity-95 transition shadow-lg">
+                        Gửi yêu cầu này ngay
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 border-t border-cyberborder bg-cybercard/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Về Lù Văn Thái</h2>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Tôi hiện đang là sinh viên chuyên ngành An toàn thông tin, đồng thời có kinh nghiệm thực tế trong việc phát triển web cơ bản, phân tích log và tìm kiếm lỗ hổng bảo mật.
+                    </p>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí sinh viên</strong>, tôi mong muốn hỗ trợ tối ưu các vấn đề kỹ thuật và an toàn mạng cho các cá nhân và doanh nghiệp nhỏ.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 font-mono text-center">
+                        <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
+                            <span class="block text-2xl font-bold text-cybercyan">100%</span>
+                            <span class="text-xs text-slate-500">Bảo mật thông tin</span>
+                        </div>
+                        <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
+                            <span class="block text-2xl font-bold text-cybergreen">24/7</span>
+                            <span class="text-xs text-slate-500">Hỗ trợ nhanh chóng</span>
+                        </div>
+                        <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
+                            <span class="block text-2xl font-bold text-amber-400">Chuẩn</span>
+                            <span class="text-xs text-slate-500">Quy trình kỹ thuật</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cybercard border border-cyberborder p-8 rounded-3xl relative">
+                    <div class="absolute -top-3 -right-3 px-3 py-1 bg-cybercyan/10 border border-cybercyan/30 text-cybercyan text-xs font-mono rounded-full">
+                        Skills & Stack
+                    </div>
+                    <h3 class="text-lg font-bold mb-6 text-white">Kỹ năng & Công cụ chuyên môn</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-mono">
+                                <span class="text-slate-300">Web Security & OWASP Top 10</span>
+                                <span class="text-cybercyan">85%</span>
+                            </div>
+                            <div class="w-full bg-cyberdark rounded-full h-2">
+                                <div class="bg-cybercyan h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-mono">
+                                <span class="text-slate-300">HTML / CSS / JavaScript / PHP</span>
+                                <span class="text-cybergreen">80%</span>
+                            </div>
+                            <div class="w-full bg-cyberdark rounded-full h-2">
+                                <div class="bg-cybergreen h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-mono">
+                                <span class="text-slate-300">Python Automation & Scripting</span>
+                                <span class="text-amber-400">75%</span>
+                            </div>
+                            <div class="w-full bg-cyberdark rounded-full h-2">
+                                <div class="bg-amber-400 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-mono">
+                                <span class="text-slate-300">Linux / Log Analysis / Networking</span>
+                                <span class="text-purple-400">80%</span>
+                            </div>
+                            <div class="w-full bg-cyberdark rounded-full h-2">
+                                <div class="bg-purple-400 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Section -->
+    <section id="contact" class="py-20 border-t border-cyberborder">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Kết Nối & Gửi Yêu Cầu</h2>
+                <p class="text-slate-400">Hãy điền thông tin dự án của bạn, tôi sẽ phản hồi lại trong thời gian sớm nhất.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact info -->
+                <div class="space-y-6">
+                    <div class="bg-cybercard border border-cyberborder p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-lg bg-cybercyan/10 text-cybercyan flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm mb-1">Email</h4>
+                        <p class="text-slate-400 text-xs">contact@luvanthai.id.vn</p>
+                    </div>
+                    <div class="bg-cybercard border border-cyberborder p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-lg bg-cybergreen/10 text-cybergreen flex items-center justify-center text-lg mb-4">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm mb-1">Telegram / Zalo</h4>
+                        <p class="text-slate-400 text-xs">@luvanthai</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="md:col-span-2 bg-cybercard border border-cyberborder p-8 rounded-3xl">
+                    <form onsubmit="handleSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Họ tên / Biệt danh của bạn</label>
+                            <input type="text" id="form-name" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Nhập tên của bạn...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Email hoặc Số điện thoại / Telegram</label>
+                            <input type="text" id="form-contact" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Để tôi có thể liên hệ lại...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Chi tiết yêu cầu / Dự án</label>
+                            <textarea id="form-message" rows="4" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Mô tả ngắn gọn yêu cầu công việc..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-sm hover:opacity-95 transition shadow-lg">
+                            Gửi Yêu Cầu Dịch Vụ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-cyberborder text-center text-xs text-slate-500 font-mono">
+        <p>&copy; 2026 Lù Văn Thái. All rights reserved. Built with Security & Passion.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-cybercard border border-cybercyan text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-32 opacity-0 transition duration-300 flex items-center space-x-3">
+        <div class="text-cybercyan text-xl">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <h5 class="font-bold text-sm">Thành công!</h5>
+            <p id="toast-msg" class="text-xs text-slate-400">Yêu cầu của bạn đã được ghi nhận.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript functionality -->
+    <script>
+        // Filter Services
+        function filterService(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-cybercyan', 'text-black');
+                btn.classList.add('bg-cybercard', 'border', 'border-cyberborder', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-cybercard', 'border', 'border-cyberborder', 'text-slate-300');
+            event.target.classList.add('bg-cybercyan', 'text-black');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Price Calculator
+        function calculateTotal() {
+            const serviceSelect = document.getElementById('calc-service');
+            let basePrice = parseInt(serviceSelect.value);
+            
+            const urgentCheck = document.getElementById('opt-urgent');
+            const reportCheck = document.getElementById('opt-report');
+
+            if (urgentCheck.checked) basePrice += parseInt(urgentCheck.value);
+            if (reportCheck.checked) basePrice += parseInt(reportCheck.value);
+
+            document.getElementById('total-price').innerText = basePrice.toLocaleString('vi-VN') + 'đ';
+        }
+
+        function selectPackage(serviceName, price) {
+            const select = document.getElementById('calc-service');
+            for(let i=0; i<select.options.length; i++) {
+                if(select.options[i].text.includes(serviceName)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            calculateTotal();
+            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function transferDataToContact() {
+            const select = document.getElementById('calc-service');
+            const serviceName = select.options[select.selectedIndex].getAttribute('data-name') || select.options[select.selectedIndex].text;
+            const price = document.getElementById('total-price').innerText;
+            
+            const urgent = document.getElementById('opt-urgent').checked ? " [Làm gấp]" : "";
+            const report = document.getElementById('opt-report').checked ? " [Báo cáo chi tiết]" : "";
+
+            document.getElementById('form-message').value = `Tôi muốn đăng ký dịch vụ: ${serviceName}${urgent}${report} với tổng chi phí ước tính khoảng ${price}.`;
+        }
+
+        // Form Submit Simulation
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = `Cảm ơn ${name}! Yêu cầu đã được gửi thành công.`;
+            
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
