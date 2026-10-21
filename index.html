@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roy Duis- Security & Web Freelance Services</title>
+    <title>Roy Duis - Security & Web Freelance Services</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -43,21 +43,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cybercyan to-cybergreen flex items-center justify-center text-cyberdark font-black text-xl shadow-lg">
-                    T
+                    R
                 </div>
                 <div>
                     <span class="font-bold text-lg tracking-wide text-white">Roy Duis</span>
                     <span class="block text-xs text-cybercyan font-mono">&lt;Security & Web Dev/&gt;</span>
                 </div>
             </div>
+            
             <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#services" class="hover:text-cybercyan transition">Dịch vụ</a>
-                <a href="#calculator" class="hover:text-cybercyan transition">Báo giá nhanh</a>
-                <a href="#about" class="hover:text-cybercyan transition">Về tôi</a>
-                <a href="#contact" class="hover:text-cybercyan transition">Liên hệ</a>
+                <a href="#services" class="hover:text-cybercyan transition" data-i18n="nav_services">Dịch vụ</a>
+                <a href="#calculator" class="hover:text-cybercyan transition" data-i18n="nav_calc">Báo giá nhanh</a>
+                <a href="#about" class="hover:text-cybercyan transition" data-i18n="nav_about">Về tôi</a>
+                <a href="#contact" class="hover:text-cybercyan transition" data-i18n="nav_contact">Liên hệ</a>
             </nav>
-            <div>
-                <a href="#calculator" class="px-4 py-2 rounded-lg bg-cybercyan/10 border border-cybercyan/40 text-cybercyan hover:bg-cybercyan hover:text-black font-medium text-sm transition duration-300">
+
+            <div class="flex items-center space-x-3">
+                <!-- Language Switcher Button -->
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg bg-cybercard border border-cyberborder hover:border-cybercyan text-xs font-mono text-slate-300 flex items-center space-x-1.5 transition">
+                    <i class="fa-solid fa-globe text-cybercyan"></i>
+                    <span id="lang-indicator">VI</span>
+                </button>
+
+                <a href="#calculator" class="px-4 py-2 rounded-lg bg-cybercyan/10 border border-cybercyan/40 text-cybercyan hover:bg-cybercyan hover:text-black font-medium text-sm transition duration-300" data-i18n="nav_hire">
                     Thuê dịch vụ ngay
                 </a>
             </div>
@@ -70,19 +78,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cybercyan/10 border border-cybercyan/30 text-cybercyan text-xs font-mono mb-6">
                 <span class="w-2 h-2 rounded-full bg-cybercyan animate-pulse"></span>
-                <span>Sẵn sàng nhận dự án mới</span>
+                <span data-i18n="hero_status">Sẵn sàng nhận dự án mới</span>
             </div>
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight" data-i18n="hero_title">
                 Giải pháp <span class="text-transparent bg-clip-text bg-gradient-to-r from-cybercyan to-cybergreen text-glow">Bảo mật Website</span> & Lập trình Chuyên nghiệp
             </h1>
-            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto" data-i18n="hero_desc">
                 Chuyên rà soát lỗ hổng, xử lý mã độc, cấu hình bảo mật hệ thống web và phát triển các công cụ tự động hóa theo yêu cầu.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold hover:opacity-90 transition shadow-lg shadow-cybercyan/20">
+                <a href="#services" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold hover:opacity-90 transition shadow-lg shadow-cybercyan/20" data-i18n="hero_btn_explore">
                     Khám phá Dịch vụ
                 </a>
-                <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-cybercard border border-cyberborder hover:border-cybercyan text-white font-medium transition">
+                <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-cybercard border border-cyberborder hover:border-cybercyan text-white font-medium transition" data-i18n="hero_btn_calc">
                     Tính giá & Đặt qua Telegram
                 </a>
             </div>
@@ -93,15 +101,15 @@
     <section id="services" class="py-20 border-t border-cyberborder bg-cybercard/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">Các Gói Dịch Vụ Cung Cấp</h2>
-                <p class="text-slate-400">Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.</p>
+                <h2 class="text-3xl font-bold mb-3" data-i18n="services_title">Các Gói Dịch Vụ Cung Cấp</h2>
+                <p class="text-slate-400" data-i18n="services_subtitle">Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.</p>
                 
                 <!-- Filter Tabs -->
                 <div class="flex flex-wrap justify-center gap-2 mt-8">
-                    <button onclick="filterService('all')" class="filter-btn active-tab px-4 py-2 rounded-lg text-sm font-medium bg-cybercyan text-black transition">Tất cả</button>
-                    <button onclick="filterService('sec')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Bảo mật & Kiểm thử</button>
-                    <button onclick="filterService('web')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Lập trình & Sửa lỗi</button>
-                    <button onclick="filterService('auto')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition">Script & Tự động hóa</button>
+                    <button onclick="filterService('all')" class="filter-btn active-tab px-4 py-2 rounded-lg text-sm font-medium bg-cybercyan text-black transition" data-i18n="filter_all">Tất cả</button>
+                    <button onclick="filterService('sec')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition" data-i18n="filter_sec">Bảo mật & Kiểm thử</button>
+                    <button onclick="filterService('web')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition" data-i18n="filter_web">Lập trình & Sửa lỗi</button>
+                    <button onclick="filterService('auto')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-cybercard border border-cyberborder text-slate-300 hover:border-cybercyan transition" data-i18n="filter_auto">Script & Tự động hóa</button>
                 </div>
             </div>
 
@@ -114,17 +122,17 @@
                         <div class="w-12 h-12 rounded-xl bg-cybercyan/10 border border-cybercyan/30 flex items-center justify-center text-cybercyan text-xl mb-6">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Rà soát Lỗ hổng Website</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s1_title">Rà soát Lỗ hổng Website</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s1_desc">
                             Quét toàn diện các lỗi OWASP Top 10 phổ biến (XSS, SQLi cơ bản, cấu hình sai file/header) và gửi báo cáo hướng dẫn fix lỗi.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 2-3 ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 500.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s1_time">Bàn giao: 2-3 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s1_price">Từ 500.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Rà soát Lỗ hổng Website', 500000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(0)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -136,17 +144,17 @@
                         <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-xl mb-6">
                             <i class="fa-solid fa-bug-slash"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Gỡ Malware & Cấu hình WAF</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s2_title">Gỡ Malware & Cấu hình WAF</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s2_desc">
                             Tìm và xóa bỏ webshell, mã độc chèn trái phép trên mã nguồn WordPress/PHP. Cấu hình Cloudflare WAF chống bot độc hại.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1-2 ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 400.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s2_time">Bàn giao: 1-2 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s2_price">Từ 400.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Gỡ Malware & Cấu hình WAF', 400000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(1)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -158,17 +166,17 @@
                         <div class="w-12 h-12 rounded-xl bg-cybergreen/10 border border-cybergreen/30 flex items-center justify-center text-cybergreen text-xl mb-6">
                             <i class="fa-solid fa-envelope-circle-check"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Cấu hình DNS & Security Headers</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s3_title">Cấu hình DNS & Security Headers</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s3_desc">
                             Thiết lập bản ghi SPF, DKIM, DMARC chống giả mạo email và cấu hình đầy đủ HTTP Security Headers chuẩn bảo mật cao.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1 ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 300.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s3_time">Bàn giao: 1 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s3_price">Từ 300.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Cấu hình DNS & Security Headers', 300000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(2)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -180,17 +188,17 @@
                         <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-6">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Sửa lỗi Web & Fix Bug</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s4_title">Sửa lỗi Web & Fix Bug</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s4_desc">
                             Khắc phục lỗi giao diện (CSS/Responsive), xử lý lỗi logic JavaScript trên trình duyệt hoặc sửa lỗi xử lý form PHP cơ bản.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: Nhanh trong ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 200.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s4_time">Bàn giao: Nhanh trong ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s4_price">Từ 200.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Sửa lỗi Web & Fix Bug', 200000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(3)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -202,17 +210,17 @@
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-6">
                             <i class="fa-solid fa-robot"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Viết Script Tự động hóa</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s5_title">Viết Script Tự động hóa</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s5_desc">
                             Lập trình Python script cào dữ liệu web (Web Scraping) hoặc tạo bot Telegram/Discord thông báo sự kiện, giám sát hệ thống.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 2-4 ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 400.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s5_time">Bàn giao: 2-4 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s5_price">Từ 400.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Viết Script Tự động hóa', 400000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(4)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -224,17 +232,17 @@
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-6">
                             <i class="fa-solid fa-file-lines"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Phân tích File Log Website</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s6_title">Phân tích File Log Website</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s6_desc">
                             Đọc và phân tích file log (Apache/Nginx access log) để lọc ra các IP có hành vi tấn công, rà quét hoặc brute-force hệ thống.
                         </p>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyberborder">
-                            <span class="text-xs text-slate-500 font-mono">Bàn giao: 1 ngày</span>
-                            <span class="text-cybercyan font-bold font-mono">Từ 300.000đ</span>
+                            <span class="text-xs text-slate-500 font-mono" data-i18n="s6_time">Bàn giao: 1 ngày</span>
+                            <span class="text-cybercyan font-bold font-mono" data-i18n="s6_price">Từ 300.000đ</span>
                         </div>
-                        <button onclick="selectPackage('Phân tích File Log Website', 300000)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition">
+                        <button onclick="selectPackage(5)" class="w-full py-2.5 rounded-lg bg-cybercyan/10 hover:bg-cybercyan text-cybercyan hover:text-black font-semibold text-sm border border-cybercyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -244,37 +252,37 @@
         </div>
     </section>
 
-    <!-- Interactive Price Calculator & Direct Telegram Order -->
+    <!-- Price Calculator & Telegram Order -->
     <section id="calculator" class="py-20 border-t border-cyberborder">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-cybercard border border-cyberborder rounded-3xl p-8 lg:p-12 glow-effect">
                 <div class="text-center mb-10">
-                    <h2 class="text-2xl font-bold mb-2">Tính toán Chi phí & Đặt dịch vụ</h2>
-                    <p class="text-slate-400 text-sm">Tùy chọn gói dịch vụ và chọn kết nối trực tiếp qua Telegram để trao đổi chi tiết.</p>
+                    <h2 class="text-2xl font-bold mb-2" data-i18n="calc_title">Tính toán Chi phí & Đặt dịch vụ</h2>
+                    <p class="text-slate-400 text-sm" data-i18n="calc_subtitle">Tùy chọn gói dịch vụ và chọn kết nối trực tiếp qua Telegram để trao đổi chi tiết.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">1. Chọn dịch vụ chính</label>
+                        <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="calc_lbl_service">1. Chọn dịch vụ chính</label>
                         <select id="calc-service" onchange="calculateTotal()" class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none">
-                            <option value="500000" data-name="Rà soát Lỗ hổng Website">Rà soát Lỗ hổng Website (500.000đ)</option>
-                            <option value="400000" data-name="Gỡ Malware & Cấu hình WAF">Gỡ Malware & Cấu hình WAF (400.000đ)</option>
-                            <option value="300000" data-name="Cấu hình DNS & Security Headers">Cấu hình DNS & Security Headers (300.000đ)</option>
-                            <option value="200000" data-name="Sửa lỗi Web & Fix Bug">Sửa lỗi Web & Fix Bug (200.000đ)</option>
-                            <option value="400000" data-name="Viết Script Tự động hóa">Viết Script Tự động hóa (400.000đ)</option>
-                            <option value="300000" data-name="Phân tích File Log Website">Phân tích File Log Website (300.000đ)</option>
+                            <option value="500000" id="opt-0">Rà soát Lỗ hổng Website (500.000đ)</option>
+                            <option value="400000" id="opt-1">Gỡ Malware & Cấu hình WAF (400.000đ)</option>
+                            <option value="300000" id="opt-2">Cấu hình DNS & Security Headers (300.000đ)</option>
+                            <option value="200000" id="opt-3">Sửa lỗi Web & Fix Bug (200.000đ)</option>
+                            <option value="400000" id="opt-4">Viết Script Tự động hóa (400.000đ)</option>
+                            <option value="300000" id="opt-5">Phân tích File Log Website (300.000đ)</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">2. Yêu cầu thêm (Tùy chọn)</label>
+                        <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="calc_lbl_addons">2. Yêu cầu thêm (Tùy chọn)</label>
                         <div class="space-y-3 pt-1">
                             <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
                                 <input type="checkbox" id="opt-urgent" value="200000" onchange="calculateTotal()" class="w-4 h-4 rounded border-cyberborder text-cybercyan focus:ring-cybercyan bg-cyberdark">
-                                <span>Làm gấp trong 24h (+200.000đ)</span>
+                                <span data-i18n="calc_opt_urgent">Làm gấp trong 24h (+200.000đ)</span>
                             </label>
                             <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
                                 <input type="checkbox" id="opt-report" value="150000" onchange="calculateTotal()" class="w-4 h-4 rounded border-cyberborder text-cybercyan focus:ring-cybercyan bg-cyberdark">
-                                <span>Báo cáo kỹ thuật chi tiết (+150.000đ)</span>
+                                <span data-i18n="calc_opt_report">Báo cáo kỹ thuật chi tiết (+150.000đ)</span>
                             </label>
                         </div>
                     </div>
@@ -282,12 +290,12 @@
 
                 <div class="bg-cyberdark border border-cyberborder rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
-                        <span class="text-xs text-slate-400 block mb-1 font-mono">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
+                        <span class="text-xs text-slate-400 block mb-1 font-mono" data-i18n="calc_total_lbl">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
                         <span id="total-price" class="text-3xl font-black text-cybercyan font-mono">500.000đ</span>
                     </div>
                     <button onclick="sendToTelegram()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-center hover:opacity-95 transition shadow-lg flex items-center justify-center space-x-2">
                         <i class="fa-brands fa-telegram text-xl"></i>
-                        <span>Đặt qua Telegram Ngay</span>
+                        <span data-i18n="btn_order_telegram">Đặt qua Telegram Ngay</span>
                     </button>
                 </div>
             </div>
@@ -299,25 +307,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">Về Lù Văn Thái</h2>
-                    <p class="text-slate-400 mb-4 leading-relaxed">
-                        Tôi hiện đang là startup chuyên ngành An toàn thông tin, đồng thời có kinh nghiệm thực tế trong việc phát triển web cơ bản, phân tích log và tìm kiếm lỗ hổng bảo mật.
+                    <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Về Roy Duis</h2>
+                    <p class="text-slate-400 mb-4 leading-relaxed" data-i18n="about_p1">
+                        Tôi hiện đang làm việc trong lĩnh vực An toàn thông tin, đồng thời có kinh nghiệm thực tế trong việc phát triển web cơ bản, phân tích log và tìm kiếm lỗ hổng bảo mật.
                     </p>
-                    <p class="text-slate-400 mb-6 leading-relaxed">
+                    <p class="text-slate-400 mb-6 leading-relaxed" data-i18n="about_p2">
                         Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí hợp lý</strong>, tôi mong muốn hỗ trợ tối ưu các vấn đề kỹ thuật và an toàn mạng cho các cá nhân và doanh nghiệp nhỏ.
                     </p>
                     <div class="grid grid-cols-3 gap-4 font-mono text-center">
                         <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
                             <span class="block text-2xl font-bold text-cybercyan">100%</span>
-                            <span class="text-xs text-slate-500">Bảo mật thông tin</span>
+                            <span class="text-xs text-slate-500" data-i18n="stat_privacy">Bảo mật thông tin</span>
                         </div>
                         <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
                             <span class="block text-2xl font-bold text-cybergreen">24/7</span>
-                            <span class="text-xs text-slate-500">Hỗ trợ nhanh chóng</span>
+                            <span class="text-xs text-slate-500" data-i18n="stat_support">Hỗ trợ nhanh chóng</span>
                         </div>
                         <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
-                            <span class="block text-2xl font-bold text-amber-400">Chuẩn</span>
-                            <span class="text-xs text-slate-500">Quy trình kỹ thuật</span>
+                            <span class="block text-2xl font-bold text-amber-400" data-i18n="stat_std_val">Chuẩn</span>
+                            <span class="text-xs text-slate-500" data-i18n="stat_std_lbl">Quy trình kỹ thuật</span>
                         </div>
                     </div>
                 </div>
@@ -325,7 +333,7 @@
                     <div class="absolute -top-3 -right-3 px-3 py-1 bg-cybercyan/10 border border-cybercyan/30 text-cybercyan text-xs font-mono rounded-full">
                         Skills & Stack
                     </div>
-                    <h3 class="text-lg font-bold mb-6 text-white">Kỹ năng & Công cụ chuyên môn</h3>
+                    <h3 class="text-lg font-bold mb-6 text-white" data-i18n="skills_title">Kỹ năng & Công cụ chuyên môn</h3>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between text-sm mb-1 font-mono">
@@ -373,8 +381,8 @@
     <section id="contact" class="py-20 border-t border-cyberborder">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-3">Kết Nối Trực Tiếp</h2>
-                <p class="text-slate-400">Liên hệ qua các kênh dưới đây để nhận hỗ trợ và tư vấn nhanh nhất.</p>
+                <h2 class="text-3xl font-bold mb-3" data-i18n="contact_title">Kết Nối Trực Tiếp</h2>
+                <p class="text-slate-400" data-i18n="contact_subtitle">Liên hệ qua các kênh dưới đây để nhận hỗ trợ và tư vấn nhanh nhất.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -383,10 +391,10 @@
                         <i class="fa-brands fa-telegram"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-1">Telegram (Ưu tiên)</h4>
-                        <p class="text-slate-400 text-sm mb-3">Nhắn tin trực tiếp phản hồi tức thì.</p>
+                        <h4 class="font-bold text-white text-lg mb-1">Telegram (Priority)</h4>
+                        <p class="text-slate-400 text-sm mb-3" data-i18n="contact_tg_desc">Nhắn tin trực tiếp phản hồi tức thì.</p>
                         <a href="https://t.me/Tmeiamzx4n7h41" target="_blank" class="inline-flex items-center text-cybercyan text-sm font-semibold hover:underline">
-                            <span>Chat trên Telegram</span> &rarr;
+                            <span data-i18n="contact_tg_btn">Chat trên Telegram</span> &rarr;
                         </a>
                     </div>
                 </div>
@@ -396,10 +404,10 @@
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg mb-1">Email Liên Hệ</h4>
-                        <p class="text-slate-400 text-sm mb-3">Dành cho công việc & báo cáo chi tiết.</p>
-                        <a href="mailto:contact@luvanthai.id.vn" class="text-cybercyan text-sm font-semibold hover:underline">
-                            luvanthai@security@gmail.com
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="contact_email_title">Email Liên Hệ</h4>
+                        <p class="text-slate-400 text-sm mb-3" data-i18n="contact_email_desc">Dành cho công việc & báo cáo chi tiết.</p>
+                        <a href="mailto:luvanthai.security@gmail.com" class="text-cybercyan text-sm font-semibold hover:underline">
+                            luvanthai.security@gmail.com
                         </a>
                     </div>
                 </div>
@@ -412,21 +420,239 @@
         <p>&copy; 2026 Roy Duis. All rights reserved. Built with Security & Passion.</p>
     </footer>
 
-    <!-- JavaScript functionality -->
+    <!-- JavaScript Translations & Functionality -->
     <script>
-        // 🚨 CHÚ Ý: Đổi chữ "luvanthai" dưới đây thành Username Telegram chuẩn của bạn (không cần dấu @)
-        const TELEGRAM_USERNAME = "@Tmeiamzx4n7h41"; 
+        const TELEGRAM_USERNAME = "Tmeiamzx4n7h41"; 
 
-        // Hàm chuyển hướng thẳng sang Telegram kèm tin nhắn soạn sẵn
+        // Dictionary Translation Data
+        const translations = {
+            vi: {
+                nav_services: "Dịch vụ",
+                nav_calc: "Báo giá nhanh",
+                nav_about: "Về tôi",
+                nav_contact: "Liên hệ",
+                nav_hire: "Thuê dịch vụ ngay",
+                hero_status: "Sẵn sàng nhận dự án mới",
+                hero_title: 'Giải pháp <span class="text-transparent bg-clip-text bg-gradient-to-r from-cybercyan to-cybergreen text-glow">Bảo mật Website</span> & Lập trình Chuyên nghiệp',
+                hero_desc: "Chuyên rà soát lỗ hổng, xử lý mã độc, cấu hình bảo mật hệ thống web và phát triển các công cụ tự động hóa theo yêu cầu.",
+                hero_btn_explore: "Khám phá Dịch vụ",
+                hero_btn_calc: "Tính giá & Đặt qua Telegram",
+                services_title: "Các Gói Dịch Vụ Cung Cấp",
+                services_subtitle: "Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.",
+                filter_all: "Tất cả",
+                filter_sec: "Bảo mật & Kiểm thử",
+                filter_web: "Lập trình & Sửa lỗi",
+                filter_auto: "Script & Tự động hóa",
+                
+                s1_title: "Rà soát Lỗ hổng Website",
+                s1_desc: "Quét toàn diện các lỗi OWASP Top 10 phổ biến (XSS, SQLi cơ bản, cấu hình sai file/header) và gửi báo cáo hướng dẫn fix lỗi.",
+                s1_time: "Bàn giao: 2-3 ngày",
+                s1_price: "Từ 500.000đ",
+
+                s2_title: "Gỡ Malware & Cấu hình WAF",
+                s2_desc: "Tìm và xóa bỏ webshell, mã độc chèn trái phép trên mã nguồn WordPress/PHP. Cấu hình Cloudflare WAF chống bot độc hại.",
+                s2_time: "Bàn giao: 1-2 ngày",
+                s2_price: "Từ 400.000đ",
+
+                s3_title: "Cấu hình DNS & Security Headers",
+                s3_desc: "Thiết lập bản ghi SPF, DKIM, DMARC chống giả mạo email và cấu hình đầy đủ HTTP Security Headers chuẩn bảo mật cao.",
+                s3_time: "Bàn giao: 1 ngày",
+                s3_price: "Từ 300.000đ",
+
+                s4_title: "Sửa lỗi Web & Fix Bug",
+                s4_desc: "Khắc phục lỗi giao diện (CSS/Responsive), xử lý lỗi logic JavaScript trên trình duyệt hoặc sửa lỗi xử lý form PHP cơ bản.",
+                s4_time: "Bàn giao: Nhanh trong ngày",
+                s4_price: "Từ 200.000đ",
+
+                s5_title: "Viết Script Tự động hóa",
+                s5_desc: "Lập trình Python script cào dữ liệu web (Web Scraping) hoặc tạo bot Telegram/Discord thông báo sự kiện, giám sát hệ thống.",
+                s5_time: "Bàn giao: 2-4 ngày",
+                s5_price: "Từ 400.000đ",
+
+                s6_title: "Phân tích File Log Website",
+                s6_desc: "Đọc và phân tích file log (Apache/Nginx access log) để lọc ra các IP có hành vi tấn công, rà quét hoặc brute-force hệ thống.",
+                s6_time: "Bàn giao: 1 ngày",
+                s6_price: "Từ 300.000đ",
+
+                btn_select_pkg: "Chọn dịch vụ này",
+                
+                calc_title: "Tính toán Chi phí & Đặt dịch vụ",
+                calc_subtitle: "Tùy chọn gói dịch vụ và chọn kết nối trực tiếp qua Telegram để trao đổi chi tiết.",
+                calc_lbl_service: "1. Chọn dịch vụ chính",
+                calc_lbl_addons: "2. Yêu cầu thêm (Tùy chọn)",
+                calc_opt_urgent: "Làm gấp trong 24h (+200.000đ)",
+                calc_opt_report: "Báo cáo kỹ thuật chi tiết (+150.000đ)",
+                calc_total_lbl: "TỔNG CHI PHÍ ƯỚC TÍNH:",
+                btn_order_telegram: "Đặt qua Telegram Ngay",
+
+                about_title: "Về Roy Duis",
+                about_p1: "Tôi hiện đang làm việc trong lĩnh vực An toàn thông tin, đồng thời có kinh nghiệm thực tế trong việc phát triển web cơ bản, phân tích log và tìm kiếm lỗ hổng bảo mật.",
+                about_p2: "Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí hợp lý</strong>, tôi mong muốn hỗ trợ tối ưu các vấn đề kỹ thuật và an toàn mạng cho các cá nhân và doanh nghiệp nhỏ.",
+                stat_privacy: "Bảo mật thông tin",
+                stat_support: "Hỗ trợ nhanh chóng",
+                stat_std_val: "Chuẩn",
+                stat_std_lbl: "Quy trình kỹ thuật",
+                skills_title: "Kỹ năng & Công cụ chuyên môn",
+
+                contact_title: "Kết Nối Trực Tiếp",
+                contact_subtitle: "Liên hệ qua các kênh dưới đây để nhận hỗ trợ và tư vấn nhanh nhất.",
+                contact_tg_desc: "Nhắn tin trực tiếp phản hồi tức thì.",
+                contact_tg_btn: "Chat trên Telegram",
+                contact_email_title: "Email Liên Hệ",
+                contact_email_desc: "Dành cho công việc & báo cáo chi tiết.",
+
+                opts: [
+                    "Rà soát Lỗ hổng Website (500.000đ)",
+                    "Gỡ Malware & Cấu hình WAF (400.000đ)",
+                    "Cấu hình DNS & Security Headers (300.000đ)",
+                    "Sửa lỗi Web & Fix Bug (200.000đ)",
+                    "Viết Script Tự động hóa (400.000đ)",
+                    "Phân tích File Log Website (300.000đ)"
+                ],
+
+                tg_msg_prefix: "Chào Roy Duis, tôi muốn tư vấn & đặt dịch vụ:",
+                tg_msg_cost: "Chi phí ước tính:",
+                tg_msg_urgent: "- Yêu cầu: Làm gấp trong 24h (+200k)",
+                tg_msg_report: "- Yêu cầu: Báo cáo kỹ thuật chi tiết (+150k)",
+                tg_msg_tail: "Yêu cầu chi tiết của tôi là: "
+            },
+            en: {
+                nav_services: "Services",
+                nav_calc: "Price Estimator",
+                nav_about: "About Me",
+                nav_contact: "Contact",
+                nav_hire: "Hire Service Now",
+                hero_status: "Available for New Projects",
+                hero_title: 'Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-cybercyan to-cybergreen text-glow">Web Security</span> & Development Solutions',
+                hero_desc: "Specialized in vulnerability scanning, malware removal, web security hardening, and custom automation scripts.",
+                hero_btn_explore: "Explore Services",
+                hero_btn_calc: "Estimate & Order via Telegram",
+                services_title: "Services Offered",
+                services_subtitle: "Tailored solutions for personal websites, small businesses, and startups.",
+                filter_all: "All Services",
+                filter_sec: "Security & Pentesting",
+                filter_web: "Web Dev & Bug Fixes",
+                filter_auto: "Scripts & Automation",
+                
+                s1_title: "Web Vulnerability Assessment",
+                s1_desc: "Comprehensive scanning for OWASP Top 10 flaws (XSS, SQLi, security misconfigurations) with remediation guidance.",
+                s1_time: "Delivery: 2-3 Days",
+                s1_price: "From ~20 USD (500,000 VND)",
+
+                s2_title: "Malware Removal & WAF Setup",
+                s2_desc: "Detect & remove webshells and malicious scripts from WordPress/PHP sites. Configure Cloudflare WAF against bad bots.",
+                s2_time: "Delivery: 1-2 Days",
+                s2_price: "From ~16 USD (400,000 VND)",
+
+                s3_title: "DNS & Security Headers Config",
+                s3_desc: "Set up SPF, DKIM, DMARC records against email spoofing and configure HTTP Security Headers for high protection.",
+                s3_time: "Delivery: 1 Day",
+                s3_price: "From ~12 USD (300,000 VND)",
+
+                s4_title: "Web Troubleshooting & Bug Fix",
+                s4_desc: "Fix UI/Responsive issues, JavaScript client-side bugs, or basic PHP form processing errors.",
+                s4_time: "Delivery: Same Day",
+                s4_price: "From ~8 USD (200,000 VND)",
+
+                s5_title: "Automation Scripts & Bots",
+                s5_desc: "Build custom Python web scrapers or automated Telegram/Discord bots for monitoring and alert notifications.",
+                s5_time: "Delivery: 2-4 Days",
+                s5_price: "From ~16 USD (400,000 VND)",
+
+                s6_title: "Web Log Analysis",
+                s6_desc: "Analyze Apache/Nginx access logs to detect attack patterns, unauthorized scanners, or brute-force attempts.",
+                s6_time: "Delivery: 1 Day",
+                s6_price: "From ~12 USD (300,000 VND)",
+
+                btn_select_pkg: "Select This Package",
+                
+                calc_title: "Cost Estimator & Booking",
+                calc_subtitle: "Choose your service options and connect directly via Telegram to discuss your project.",
+                calc_lbl_service: "1. Select Main Service",
+                calc_lbl_addons: "2. Add-on Options (Optional)",
+                calc_opt_urgent: "Express Delivery in 24h (+200,000 VND / ~8 USD)",
+                calc_opt_report: "Detailed Technical PDF Report (+150,000 VND / ~6 USD)",
+                calc_total_lbl: "ESTIMATED TOTAL COST:",
+                btn_order_telegram: "Order via Telegram Now",
+
+                about_title: "About Roy Duis",
+                about_p1: "I am currently working in the Information Security field, with practical experience in basic web development, log analysis, and vulnerability assessment.",
+                about_p2: "Driven by <strong>dedication, strict data confidentiality, and reasonable pricing</strong>, I aim to provide optimal security and technical support for individuals and small businesses.",
+                stat_privacy: "Strict Confidentiality",
+                stat_support: "24/7 Fast Support",
+                stat_std_val: "Standard",
+                stat_std_lbl: "Technical Process",
+                skills_title: "Skills & Tech Stack",
+
+                contact_title: "Direct Contact",
+                contact_subtitle: "Reach out via any of the channels below for fast consultation.",
+                contact_tg_desc: "Direct message with instant response.",
+                contact_tg_btn: "Chat on Telegram",
+                contact_email_title: "Email Contact",
+                contact_email_desc: "For business inquiries & detailed reports.",
+
+                opts: [
+                    "Web Vulnerability Assessment (~20 USD / 500,000đ)",
+                    "Malware Removal & WAF Setup (~16 USD / 400,000đ)",
+                    "DNS & Security Headers Config (~12 USD / 300,000đ)",
+                    "Web Troubleshooting & Bug Fix (~8 USD / 200,000đ)",
+                    "Automation Scripts & Bots (~16 USD / 400,000đ)",
+                    "Web Log Analysis (~12 USD / 300,000đ)"
+                ],
+
+                tg_msg_prefix: "Hello Roy Duis, I would like to inquire about & book your service:",
+                tg_msg_cost: "Estimated cost:",
+                tg_msg_urgent: "- Requirement: Express 24h delivery",
+                tg_msg_report: "- Requirement: Detailed technical PDF report",
+                tg_msg_tail: "My project/website details are: "
+            }
+        };
+
+        let currentLang = localStorage.getItem('site_lang') || 'vi';
+
+        function updateLanguage() {
+            const langData = translations[currentLang];
+            
+            // Translate all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (langData[key]) {
+                    el.innerHTML = langData[key];
+                }
+            });
+
+            // Update Select dropdown options text
+            for (let i = 0; i < 6; i++) {
+                const optEl = document.getElementById(`opt-${i}`);
+                if (optEl) optEl.innerText = langData.opts[i];
+            }
+
+            // Update Indicator
+            document.getElementById('lang-indicator').innerText = currentLang.toUpperCase();
+            document.documentElement.lang = currentLang;
+
+            localStorage.setItem('site_lang', currentLang);
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'vi' ? 'en' : 'vi';
+            updateLanguage();
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', updateLanguage);
+
+        // Telegram Order Function
         function sendToTelegram() {
+            const langData = translations[currentLang];
             const select = document.getElementById('calc-service');
-            const serviceName = select.options[select.selectedIndex].getAttribute('data-name') || select.options[select.selectedIndex].text;
+            const serviceName = select.options[select.selectedIndex].text;
             const price = document.getElementById('total-price').innerText;
             
-            const urgent = document.getElementById('opt-urgent').checked ? "%0A- Yêu cầu: Làm gấp trong 24h (+200k)" : "";
-            const report = document.getElementById('opt-report').checked ? "%0A- Yêu cầu: Báo cáo kỹ thuật chi tiết (+150k)" : "";
+            const urgent = document.getElementById('opt-urgent').checked ? `%0A${langData.tg_msg_urgent}` : "";
+            const report = document.getElementById('opt-report').checked ? `%0A${langData.tg_msg_report}` : "";
 
-            const message = `Chào Thái, tôi muốn tư vấn & đặt dịch vụ:%0A👉 *${serviceName}*%0A💰 Chi phí ước tính: *${price}*${urgent}${report}%0A%0AYêu cầu chi tiết của tôi là: `;
+            const message = `${langData.tg_msg_prefix}%0A👉 *${serviceName}*%0A💰 ${langData.tg_msg_cost} *${price}*${urgent}${report}%0A%0A${langData.tg_msg_tail}`;
 
             window.open(`https://t.me/${TELEGRAM_USERNAME}?text=${message}`, '_blank');
         }
@@ -466,13 +692,10 @@
             document.getElementById('total-price').innerText = basePrice.toLocaleString('vi-VN') + 'đ';
         }
 
-        function selectPackage(serviceName, price) {
+        function selectPackage(index) {
             const select = document.getElementById('calc-service');
-            for(let i=0; i<select.options.length; i++) {
-                if(select.options[i].text.includes(serviceName)) {
-                    select.selectedIndex = i;
-                    break;
-                }
+            if (select.options[index]) {
+                select.selectedIndex = index;
             }
             calculateTotal();
             document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
