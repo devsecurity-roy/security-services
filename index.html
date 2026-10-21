@@ -11,11 +11,11 @@
             theme: {
                 extend: {
                     colors: {
-                        branddark: '#121316',
-                        brandcard: '#1a1c23',
-                        brandborder: '#2a2d37',
-                        brandaccent: '#38bdf8',
-                        brandemerald: '#34d399',
+                        branddark: '#0a0f1d',
+                        brandcard: '#131b2e',
+                        brandborder: '#1e293b',
+                        brandcyan: '#06b6d4',
+                        brandemerald: '#10b981',
                     }
                 }
             }
@@ -23,37 +23,43 @@
     </script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glow-hover:hover {
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+            border-color: rgba(6, 182, 212, 0.4);
+        }
+    </style>
 </head>
-<body class="bg-branddark text-slate-200 font-serif antialiased selection:bg-brandaccent selection:text-black">
+<body class="bg-branddark text-slate-100 font-sans antialiased selection:bg-brandcyan selection:text-black">
 
     <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-branddark/90 backdrop-blur-md border-b border-brandborder">
+    <header class="sticky top-0 z-50 bg-branddark/80 backdrop-blur-md border-b border-brandborder">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-slate-100 font-bold text-xl shadow">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brandcyan to-brandemerald flex items-center justify-center text-branddark font-black text-xl shadow-lg">
                     R
                 </div>
                 <div>
                     <span class="font-bold text-lg tracking-wide text-white block">Roy Duis</span>
-                    <span class="block text-xs text-slate-400 font-mono tracking-normal">&lt;Security & Web Specialist/&gt;</span>
+                    <span class="block text-xs text-brandcyan font-mono">&lt;Security & Web Dev/&gt;</span>
                 </div>
             </div>
             
-            <nav class="hidden md:flex space-x-8 text-base font-normal text-slate-300">
-                <a href="#services" class="hover:text-brandaccent transition" data-i18n="nav_services">Dịch vụ</a>
-                <a href="#calculator" class="hover:text-brandaccent transition" data-i18n="nav_calc">Báo giá nhanh</a>
-                <a href="#about" class="hover:text-brandaccent transition" data-i18n="nav_about">Về tôi</a>
-                <a href="#contact" class="hover:text-brandaccent transition" data-i18n="nav_contact">Liên hệ</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-brandcyan transition" data-i18n="nav_services">Dịch vụ</a>
+                <a href="#calculator" class="hover:text-brandcyan transition" data-i18n="nav_calc">Báo giá nhanh</a>
+                <a href="#about" class="hover:text-brandcyan transition" data-i18n="nav_about">Về tôi</a>
+                <a href="#contact" class="hover:text-brandcyan transition" data-i18n="nav_contact">Liên hệ</a>
             </nav>
 
             <div class="flex items-center space-x-3">
                 <!-- Language Switcher Button -->
-                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded bg-brandcard border border-brandborder hover:border-slate-400 text-xs font-sans text-slate-300 flex items-center space-x-1.5 transition">
-                    <i class="fa-solid fa-globe text-brandaccent"></i>
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg bg-brandcard border border-brandborder hover:border-brandcyan text-xs font-mono text-slate-300 flex items-center space-x-1.5 transition">
+                    <i class="fa-solid fa-globe text-brandcyan"></i>
                     <span id="lang-indicator">VI</span>
                 </button>
 
-                <a href="#calculator" class="px-4 py-2 rounded bg-slate-800 border border-slate-600 text-slate-100 hover:bg-slate-700 font-sans text-xs uppercase tracking-wider transition duration-300" data-i18n="nav_hire">
+                <a href="#calculator" class="px-4 py-2 rounded-lg bg-brandcyan/10 border border-brandcyan/40 text-brandcyan hover:bg-brandcyan hover:text-black font-medium text-sm transition duration-300" data-i18n="nav_hire">
                     Thuê dịch vụ ngay
                 </a>
             </div>
@@ -61,23 +67,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative py-20 lg:py-28 border-b border-brandborder">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded bg-slate-800/80 border border-brandborder text-slate-300 text-xs font-sans mb-6">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <section class="relative overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brandcyan/10 border border-brandcyan/30 text-brandcyan text-xs font-mono mb-6">
+                <span class="w-2 h-2 rounded-full bg-brandcyan animate-pulse"></span>
                 <span data-i18n="hero_status">Sẵn sàng nhận dự án mới</span>
             </div>
-            <h1 class="text-4xl sm:text-6xl font-normal tracking-tight mb-6 max-w-4xl mx-auto leading-tight text-white" data-i18n="hero_title">
-                Giải pháp <span class="italic text-brandaccent">Bảo mật Website</span> & Thiết kế Lập trình Thực chiến
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight text-white" data-i18n="hero_title">
+                Giải pháp <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandcyan to-brandemerald">Bảo mật Website</span> & Thiết kế Lập trình Thực chiến
             </h1>
             <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
-                Chuyên kiểm thử lỗ hổng, cấp cứu mã độc, gia cố hạ tầng mạng, phân tích log sự cố và phát triển website/công cụ tự động hóa với chi phí tiết kiệm.
+                Chuyên kiểm thử lỗ hổng, cấp cứu mã độc, gia cố hạ tầng mạng, phân tích log sự cố và phát triển website/công cụ tự động hóa với chi phí tiết kiệm tối đa.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 font-sans text-sm">
-                <a href="#services" class="px-8 py-3.5 rounded bg-slate-200 text-slate-900 font-bold hover:bg-white transition shadow" data-i18n="hero_btn_explore">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 text-sm font-semibold">
+                <a href="#services" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brandcyan to-brandemerald text-black font-bold hover:opacity-90 transition shadow-lg shadow-brandcyan/20" data-i18n="hero_btn_explore">
                     Khám phá Dịch vụ
                 </a>
-                <a href="#calculator" class="px-8 py-3.5 rounded bg-brandcard border border-brandborder hover:border-slate-400 text-slate-200 transition" data-i18n="hero_btn_calc">
+                <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-brandcard border border-brandborder hover:border-brandcyan text-white font-medium transition" data-i18n="hero_btn_calc">
                     Tính giá & Đặt qua Telegram
                 </a>
             </div>
@@ -85,18 +92,18 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-brandcard/30">
+    <section id="services" class="py-20 border-t border-brandborder bg-brandcard/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3 text-white" data-i18n="services_title">Danh Mục Dịch Vụ Cung Cấp</h2>
-                <p class="text-slate-400 text-base" data-i18n="services_subtitle">Được thiết kế tối ưu riêng cho các cá nhân, dự án startup và doanh nghiệp vừa & nhỏ.</p>
+                <h2 class="text-3xl font-bold mb-3 text-white" data-i18n="services_title">Các Gói Dịch Vụ Cung Cấp</h2>
+                <p class="text-slate-400" data-i18n="services_subtitle">Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.</p>
                 
                 <!-- Filter Tabs -->
-                <div class="flex flex-wrap justify-center gap-2 mt-8 font-sans text-xs">
-                    <button onclick="filterService('all')" class="filter-btn active-tab px-4 py-2 rounded font-medium bg-slate-200 text-black transition" data-i18n="filter_all">Tất cả</button>
-                    <button onclick="filterService('sec')" class="filter-btn px-4 py-2 rounded font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-slate-400 transition" data-i18n="filter_sec">Security & Pentest</button>
-                    <button onclick="filterService('sys')" class="filter-btn px-4 py-2 rounded font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-slate-400 transition" data-i18n="filter_sys">System & Hardening</button>
-                    <button onclick="filterService('dev')" class="filter-btn px-4 py-2 rounded font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-slate-400 transition" data-i18n="filter_dev">Web Dev & Automation</button>
+                <div class="flex flex-wrap justify-center gap-2 mt-8 text-sm">
+                    <button onclick="filterService('all')" class="filter-btn active-tab px-4 py-2 rounded-lg font-medium bg-brandcyan text-black transition" data-i18n="filter_all">Tất cả</button>
+                    <button onclick="filterService('sec')" class="filter-btn px-4 py-2 rounded-lg font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-brandcyan transition" data-i18n="filter_sec">Security & Pentest</button>
+                    <button onclick="filterService('sys')" class="filter-btn px-4 py-2 rounded-lg font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-brandcyan transition" data-i18n="filter_sys">System & Hardening</button>
+                    <button onclick="filterService('dev')" class="filter-btn px-4 py-2 rounded-lg font-medium bg-brandcard border border-brandborder text-slate-300 hover:border-brandcyan transition" data-i18n="filter_dev">Web Dev & Automation</button>
                 </div>
             </div>
 
@@ -104,9 +111,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="service-grid">
                 
                 <!-- Item 1 -->
-                <div class="service-card sec bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card sec bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-brandaccent text-xl mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-brandcyan/10 border border-brandcyan/30 flex items-center justify-center text-brandcyan text-xl mb-6">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s1_title">Kiểm thử Lỗ hổng Web (Pentest)</h3>
@@ -115,20 +122,20 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s1_time">Bàn giao: 2-3 ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s1_price">Từ 190.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s1_price">Từ 190.000đ</span>
                         </div>
-                        <button onclick="selectPackage(0)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(0)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="service-card sec bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card sec bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-rose-400 text-xl mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl mb-6">
                             <i class="fa-solid fa-bug-slash"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s2_title">Cấp cứu Malware & Webshell</h3>
@@ -137,21 +144,21 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s2_time">Bàn giao: 1-2 ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s2_price">Từ 150.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s2_price">Từ 150.000đ</span>
                         </div>
-                        <button onclick="selectPackage(1)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(1)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="service-card sys bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card sys bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-sky-400 text-xl mb-6">
-                            <i class="fa-solid fa-file-lines"></i>
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xl mb-6">
+                            <i class="fa-solid fa-file-code"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s3_title">Phân tích File Log & Truy vết</h3>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="s3_desc">
@@ -159,20 +166,20 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s3_time">Bàn giao: 1 ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s3_price">Từ 120.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s3_price">Từ 120.000đ</span>
                         </div>
-                        <button onclick="selectPackage(2)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(2)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="service-card sys bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card sys bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-emerald-400 text-xl mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-brandemerald/10 border border-brandemerald/30 flex items-center justify-center text-brandemerald text-xl mb-6">
                             <i class="fa-solid fa-server"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s4_title">Gia cố Server & Cloudflare WAF</h3>
@@ -181,20 +188,20 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s4_time">Bàn giao: 1 ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s4_price">Từ 120.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s4_price">Từ 120.000đ</span>
                         </div>
-                        <button onclick="selectPackage(3)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(3)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="service-card sys bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card sys bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-amber-400 text-xl mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-6">
                             <i class="fa-solid fa-envelope-circle-check"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s5_title">Bảo mật DNS & Email Domain</h3>
@@ -203,20 +210,20 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s5_time">Bàn giao: Trong ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s5_price">Từ 90.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s5_price">Từ 90.000đ</span>
                         </div>
-                        <button onclick="selectPackage(4)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(4)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="service-card dev bg-brandcard border border-brandborder rounded p-6 hover:border-slate-500 transition flex flex-col justify-between">
+                <div class="service-card dev bg-brandcard border border-brandborder rounded-2xl p-6 glow-hover transition flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded bg-slate-800 border border-brandborder flex items-center justify-center text-purple-400 text-xl mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-6">
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white" data-i18n="s6_title">Thiết kế Web & Script Tự động</h3>
@@ -225,11 +232,11 @@
                         </p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-sans">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-brandborder font-mono">
                             <span class="text-xs text-slate-500" data-i18n="s6_time">Bàn giao: 2-3 ngày</span>
-                            <span class="text-brandaccent font-bold" data-i18n="s6_price">Từ 150.000đ</span>
+                            <span class="text-brandcyan font-bold" data-i18n="s6_price">Từ 150.000đ</span>
                         </div>
-                        <button onclick="selectPackage(5)" class="w-full py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-sans text-xs uppercase tracking-wider border border-brandborder transition" data-i18n="btn_select_pkg">
+                        <button onclick="selectPackage(5)" class="w-full py-2.5 rounded-lg bg-brandcyan/10 hover:bg-brandcyan text-brandcyan hover:text-black font-semibold text-sm border border-brandcyan/30 transition" data-i18n="btn_select_pkg">
                             Chọn dịch vụ này
                         </button>
                     </div>
@@ -242,16 +249,16 @@
     <!-- Price Calculator & Telegram Order -->
     <section id="calculator" class="py-20 border-t border-brandborder">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-brandcard border border-brandborder rounded-lg p-8 lg:p-12 shadow-xl">
+            <div class="bg-brandcard border border-brandborder rounded-3xl p-8 lg:p-12 shadow-xl">
                 <div class="text-center mb-10">
                     <h2 class="text-2xl font-bold mb-2 text-white" data-i18n="calc_title">Tính toán Chi phí & Đặt dịch vụ</h2>
                     <p class="text-slate-400 text-sm" data-i18n="calc_subtitle">Lựa chọn gói công việc và kết nối trực tiếp qua Telegram để trao đổi chi tiết.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 font-sans">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2" data-i18n="calc_lbl_service">1. Chọn dịch vụ chính</label>
-                        <select id="calc-service" onchange="calculateTotal()" class="w-full bg-branddark border border-brandborder rounded px-4 py-3 text-sm focus:border-slate-400 focus:outline-none text-slate-200">
+                        <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="calc_lbl_service">1. Chọn dịch vụ chính</label>
+                        <select id="calc-service" onchange="calculateTotal()" class="w-full bg-branddark border border-brandborder rounded-xl px-4 py-3 text-sm focus:border-brandcyan focus:outline-none text-slate-200">
                             <option value="190000" id="opt-0">Kiểm thử Lỗ hổng Web & Report (190.000đ)</option>
                             <option value="150000" id="opt-1">Cấp cứu Malware & Webshell (150.000đ)</option>
                             <option value="120000" id="opt-2">Phân tích File Log & Truy vết (120.000đ)</option>
@@ -261,26 +268,26 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2" data-i18n="calc_lbl_addons">2. Yêu cầu thêm (Tùy chọn)</label>
+                        <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="calc_lbl_addons">2. Yêu cầu thêm (Tùy chọn)</label>
                         <div class="space-y-3 pt-1">
                             <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
-                                <input type="checkbox" id="opt-urgent" value="80000" onchange="calculateTotal()" class="w-4 h-4 rounded border-brandborder text-slate-800 bg-branddark focus:ring-0">
+                                <input type="checkbox" id="opt-urgent" value="80000" onchange="calculateTotal()" class="w-4 h-4 rounded border-brandborder text-brandcyan focus:ring-brandcyan bg-branddark">
                                 <span data-i18n="calc_opt_urgent">Làm gấp trong 24h (+80.000đ)</span>
                             </label>
                             <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
-                                <input type="checkbox" id="opt-report" value="50000" onchange="calculateTotal()" class="w-4 h-4 rounded border-brandborder text-slate-800 bg-branddark focus:ring-0">
+                                <input type="checkbox" id="opt-report" value="50000" onchange="calculateTotal()" class="w-4 h-4 rounded border-brandborder text-brandcyan focus:ring-brandcyan bg-branddark">
                                 <span data-i18n="calc_opt_report">Báo cáo kỹ thuật chi tiết (+50.000đ)</span>
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-branddark border border-brandborder rounded p-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans">
+                <div class="bg-branddark border border-brandborder rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
-                        <span class="text-xs text-slate-400 block mb-1 uppercase tracking-wider" data-i18n="calc_total_lbl">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
-                        <span id="total-price" class="text-3xl font-bold text-brandaccent">190.000đ</span>
+                        <span class="text-xs text-slate-400 block mb-1 font-mono" data-i18n="calc_total_lbl">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
+                        <span id="total-price" class="text-3xl font-black text-brandcyan font-mono">190.000đ</span>
                     </div>
-                    <button onclick="sendToTelegram()" class="w-full sm:w-auto px-8 py-3.5 rounded bg-slate-200 text-slate-900 font-bold text-center hover:bg-white transition shadow flex items-center justify-center space-x-2">
+                    <button onclick="sendToTelegram()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-brandcyan to-brandemerald text-black font-bold text-center hover:opacity-95 transition shadow-lg flex items-center justify-center space-x-2">
                         <i class="fa-brands fa-telegram text-lg"></i>
                         <span data-i18n="btn_order_telegram">Đặt qua Telegram Ngay</span>
                     </button>
@@ -301,40 +308,40 @@
                     <p class="text-slate-400 mb-6 leading-relaxed" data-i18n="about_p2">
                         Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí hợp lý</strong>, tôi luôn sẵn sàng hỗ trợ bạn xử lý các sự cố kỹ thuật một cách nhanh chóng nhất.
                     </p>
-                    <div class="grid grid-cols-3 gap-4 text-center font-sans">
-                        <div class="bg-brandcard border border-brandborder p-4 rounded">
-                            <span class="block text-2xl font-bold text-brandaccent">100%</span>
+                    <div class="grid grid-cols-3 gap-4 text-center font-mono">
+                        <div class="bg-brandcard border border-brandborder p-4 rounded-xl">
+                            <span class="block text-2xl font-bold text-brandcyan">100%</span>
                             <span class="text-xs text-slate-400" data-i18n="stat_privacy">Bảo mật thông tin</span>
                         </div>
-                        <div class="bg-brandcard border border-brandborder p-4 rounded">
-                            <span class="block text-2xl font-bold text-emerald-400">24/7</span>
+                        <div class="bg-brandcard border border-brandborder p-4 rounded-xl">
+                            <span class="block text-2xl font-bold text-brandemerald">24/7</span>
                             <span class="text-xs text-slate-400" data-i18n="stat_support">Hỗ trợ nhanh chóng</span>
                         </div>
-                        <div class="bg-brandcard border border-brandborder p-4 rounded">
+                        <div class="bg-brandcard border border-brandborder p-4 rounded-xl">
                             <span class="block text-2xl font-bold text-amber-400" data-i18n="stat_std_val">Chuẩn</span>
                             <span class="text-xs text-slate-400" data-i18n="stat_std_lbl">Quy trình kỹ thuật</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-brandcard border border-brandborder p-8 rounded relative">
+                <div class="bg-brandcard border border-brandborder p-8 rounded-3xl relative">
                     <h3 class="text-xl font-bold mb-6 text-white" data-i18n="skills_title">Kỹ năng & Công cụ chuyên môn</h3>
-                    <div class="space-y-4 font-sans text-xs">
+                    <div class="space-y-4 font-mono text-xs">
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-slate-300">Web Security & OWASP Pentesting</span>
-                                <span class="text-brandaccent">85%</span>
+                                <span class="text-brandcyan">85%</span>
                             </div>
-                            <div class="w-full bg-branddark rounded-full h-1.5">
-                                <div class="bg-brandaccent h-1.5 rounded-full" style="width: 85%"></div>
+                            <div class="w-full bg-branddark rounded-full h-2">
+                                <div class="bg-brandcyan h-2 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-slate-300">Log Analysis & Forensics (Linux/Cloud)</span>
-                                <span class="text-emerald-400">80%</span>
+                                <span class="text-brandemerald">80%</span>
                             </div>
-                            <div class="w-full bg-branddark rounded-full h-1.5">
-                                <div class="bg-emerald-400 h-1.5 rounded-full" style="width: 80%"></div>
+                            <div class="w-full bg-branddark rounded-full h-2">
+                                <div class="bg-brandemerald h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div>
@@ -342,8 +349,8 @@
                                 <span class="text-slate-300">Python Scripting & Automation</span>
                                 <span class="text-amber-400">80%</span>
                             </div>
-                            <div class="w-full bg-branddark rounded-full h-1.5">
-                                <div class="bg-amber-400 h-1.5 rounded-full" style="width: 80%"></div>
+                            <div class="w-full bg-branddark rounded-full h-2">
+                                <div class="bg-amber-400 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div>
@@ -351,8 +358,8 @@
                                 <span class="text-slate-300">HTML / CSS / JS / PHP / MySQL</span>
                                 <span class="text-purple-400">75%</span>
                             </div>
-                            <div class="w-full bg-branddark rounded-full h-1.5">
-                                <div class="bg-purple-400 h-1.5 rounded-full" style="width: 75%"></div>
+                            <div class="w-full bg-branddark rounded-full h-2">
+                                <div class="bg-purple-400 h-2 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
                     </div>
@@ -370,27 +377,27 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-brandcard border border-brandborder p-8 rounded flex items-center space-x-6 hover:border-slate-500 transition">
-                    <div class="w-14 h-14 rounded bg-slate-800 text-emerald-400 border border-brandborder flex items-center justify-center text-2xl shrink-0">
+                <div class="bg-brandcard border border-brandborder p-8 rounded-2xl flex items-center space-x-6 glow-hover transition">
+                    <div class="w-14 h-14 rounded-2xl bg-brandemerald/10 text-brandemerald border border-brandemerald/30 flex items-center justify-center text-2xl shrink-0">
                         <i class="fa-brands fa-telegram"></i>
                     </div>
                     <div>
                         <h4 class="font-bold text-white text-lg mb-1">Telegram (Ưu tiên)</h4>
                         <p class="text-slate-400 text-sm mb-3" data-i18n="contact_tg_desc">Nhắn tin trao đổi công việc trực tiếp.</p>
-                        <a href="https://t.me/Tmeiamzx4n7h41" target="_blank" class="inline-flex items-center text-brandaccent text-sm font-sans hover:underline">
+                        <a href="https://t.me/Tmeiamzx4n7h41" target="_blank" class="inline-flex items-center text-brandcyan text-sm font-semibold hover:underline">
                             <span data-i18n="contact_tg_btn">Chat trên Telegram</span> &rarr;
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-brandcard border border-brandborder p-8 rounded flex items-center space-x-6 hover:border-slate-500 transition">
-                    <div class="w-14 h-14 rounded bg-slate-800 text-brandaccent border border-brandborder flex items-center justify-center text-2xl shrink-0">
+                <div class="bg-brandcard border border-brandborder p-8 rounded-2xl flex items-center space-x-6 glow-hover transition">
+                    <div class="w-14 h-14 rounded-2xl bg-brandcyan/10 text-brandcyan border border-brandcyan/30 flex items-center justify-center text-2xl shrink-0">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div>
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="contact_email_title">Email Liên Hệ</h4>
                         <p class="text-slate-400 text-sm mb-3" data-i18n="contact_email_desc">Dành cho trao đổi chi tiết & gửi báo cáo.</p>
-                        <a href="mailto:luvanthai.security@gmail.com" class="text-brandaccent text-sm font-sans hover:underline">
+                        <a href="mailto:luvanthai.security@gmail.com" class="text-brandcyan text-sm font-semibold hover:underline">
                             luvanthai.security@gmail.com
                         </a>
                     </div>
@@ -400,7 +407,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-brandborder text-center text-xs text-slate-500 font-sans">
+    <footer class="py-8 border-t border-brandborder text-center text-xs text-slate-500 font-mono">
         <p>&copy; 2026 Roy Duis. All rights reserved. Built with Security & Precision.</p>
     </footer>
 
@@ -417,12 +424,12 @@
                 nav_contact: "Liên hệ",
                 nav_hire: "Thuê dịch vụ ngay",
                 hero_status: "Sẵn sàng nhận dự án mới",
-                hero_title: 'Giải pháp <span class="italic text-brandaccent">Bảo mật Website</span> & Thiết kế Lập trình Thực chiến',
-                hero_desc: "Chuyên kiểm thử lỗ hổng, cấp cứu mã độc, gia cố hạ tầng mạng, phân tích log sự cố và phát triển website/công cụ tự động hóa với chi phí tiết kiệm.",
+                hero_title: 'Giải pháp <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandcyan to-brandemerald">Bảo mật Website</span> & Thiết kế Lập trình Thực chiến',
+                hero_desc: "Chuyên kiểm thử lỗ hổng, cấp cứu mã độc, gia cố hạ tầng mạng, phân tích log sự cố và phát triển website/công cụ tự động hóa với chi phí tiết kiệm tối đa.",
                 hero_btn_explore: "Khám phá Dịch vụ",
                 hero_btn_calc: "Tính giá & Đặt qua Telegram",
-                services_title: "Danh Mục Dịch Vụ Cung Cấp",
-                services_subtitle: "Được thiết kế tối ưu riêng cho các cá nhân, dự án startup và doanh nghiệp vừa & nhỏ.",
+                services_title: "Các Gói Dịch Vụ Cung Cấp",
+                services_subtitle: "Được tối ưu riêng cho các website cá nhân, doanh nghiệp nhỏ và startup.",
                 filter_all: "Tất cả",
                 filter_sec: "Security & Pentest",
                 filter_sys: "System & Hardening",
@@ -507,7 +514,7 @@
                 nav_contact: "Contact",
                 nav_hire: "Hire Service Now",
                 hero_status: "Available for New Projects",
-                hero_title: 'Practical <span class="italic text-brandaccent">Web Security</span> & Development Solutions',
+                hero_title: 'Practical <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandcyan to-brandemerald">Web Security</span> & Development Solutions',
                 hero_desc: "Specialized in vulnerability testing, malware cleanup, server hardening, log forensics, and custom web/automation script development.",
                 hero_btn_explore: "Explore Services",
                 hero_btn_calc: "Estimate & Order via Telegram",
@@ -647,11 +654,11 @@
             const buttons = document.querySelectorAll('.filter-btn');
             
             buttons.forEach(btn => {
-                btn.classList.remove('bg-slate-200', 'text-black');
+                btn.classList.remove('bg-brandcyan', 'text-black');
                 btn.classList.add('bg-brandcard', 'border', 'border-brandborder', 'text-slate-300');
             });
             event.target.classList.remove('bg-brandcard', 'border', 'border-brandborder', 'text-slate-300');
-            event.target.classList.add('bg-slate-200', 'text-black');
+            event.target.classList.add('bg-brandcyan', 'text-black');
 
             cards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
