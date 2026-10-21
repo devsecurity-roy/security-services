@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royduis - Security & Web Freelance Services</title>
+    <title>Roy Duis- Security & Web Freelance Services</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -57,7 +57,7 @@
                 <a href="#contact" class="hover:text-cybercyan transition">Liên hệ</a>
             </nav>
             <div>
-                <a href="#contact" class="px-4 py-2 rounded-lg bg-cybercyan/10 border border-cybercyan/40 text-cybercyan hover:bg-cybercyan hover:text-black font-medium text-sm transition duration-300">
+                <a href="#calculator" class="px-4 py-2 rounded-lg bg-cybercyan/10 border border-cybercyan/40 text-cybercyan hover:bg-cybercyan hover:text-black font-medium text-sm transition duration-300">
                     Thuê dịch vụ ngay
                 </a>
             </div>
@@ -83,7 +83,7 @@
                     Khám phá Dịch vụ
                 </a>
                 <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-cybercard border border-cyberborder hover:border-cybercyan text-white font-medium transition">
-                    Tính giá dịch vụ trực tuyến
+                    Tính giá & Đặt qua Telegram
                 </a>
             </div>
         </div>
@@ -244,13 +244,13 @@
         </div>
     </section>
 
-    <!-- Interactive Price Calculator -->
+    <!-- Interactive Price Calculator & Direct Telegram Order -->
     <section id="calculator" class="py-20 border-t border-cyberborder">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-cybercard border border-cyberborder rounded-3xl p-8 lg:p-12 glow-effect">
                 <div class="text-center mb-10">
-                    <h2 class="text-2xl font-bold mb-2">Tính toán Chi phí & Đặt lịch</h2>
-                    <p class="text-slate-400 text-sm">Tùy chọn gói dịch vụ và các yêu cầu đi kèm để ước tính chi phí sơ bộ.</p>
+                    <h2 class="text-2xl font-bold mb-2">Tính toán Chi phí & Đặt dịch vụ</h2>
+                    <p class="text-slate-400 text-sm">Tùy chọn gói dịch vụ và chọn kết nối trực tiếp qua Telegram để trao đổi chi tiết.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -274,7 +274,7 @@
                             </label>
                             <label class="flex items-center space-x-3 text-sm text-slate-300 cursor-pointer">
                                 <input type="checkbox" id="opt-report" value="150000" onchange="calculateTotal()" class="w-4 h-4 rounded border-cyberborder text-cybercyan focus:ring-cybercyan bg-cyberdark">
-                                <span>Báo cáo kỹ thuật chi tiết kèm hình ảnh (+150.000đ)</span>
+                                <span>Báo cáo kỹ thuật chi tiết (+150.000đ)</span>
                             </label>
                         </div>
                     </div>
@@ -285,9 +285,10 @@
                         <span class="text-xs text-slate-400 block mb-1 font-mono">TỔNG CHI PHÍ ƯỚC TÍNH:</span>
                         <span id="total-price" class="text-3xl font-black text-cybercyan font-mono">500.000đ</span>
                     </div>
-                    <a href="#contact" onclick="transferDataToContact()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-center hover:opacity-95 transition shadow-lg">
-                        Gửi yêu cầu này ngay
-                    </a>
+                    <button onclick="sendToTelegram()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-center hover:opacity-95 transition shadow-lg flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                        <span>Đặt qua Telegram Ngay</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -298,12 +299,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">Về Roy</h2>
+                    <h2 class="text-3xl font-bold mb-6">Về Lù Văn Thái</h2>
                     <p class="text-slate-400 mb-4 leading-relaxed">
                         Tôi hiện đang là startup chuyên ngành An toàn thông tin, đồng thời có kinh nghiệm thực tế trong việc phát triển web cơ bản, phân tích log và tìm kiếm lỗ hổng bảo mật.
                     </p>
                     <p class="text-slate-400 mb-6 leading-relaxed">
-                        Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí sinh viên</strong>, tôi mong muốn hỗ trợ tối ưu các vấn đề kỹ thuật và an toàn mạng cho các cá nhân và doanh nghiệp nhỏ.
+                        Với phương châm làm việc <strong>tận tâm, bảo mật thông tin tuyệt đối và chi phí hợp lý</strong>, tôi mong muốn hỗ trợ tối ưu các vấn đề kỹ thuật và an toàn mạng cho các cá nhân và doanh nghiệp nhỏ.
                     </p>
                     <div class="grid grid-cols-3 gap-4 font-mono text-center">
                         <div class="bg-cybercard border border-cyberborder p-4 rounded-xl">
@@ -368,52 +369,39 @@
         </div>
     </section>
 
-    <!-- Contact / Booking Section -->
+    <!-- Contact Section -->
     <section id="contact" class="py-20 border-t border-cyberborder">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-3">Kết Nối & Gửi Yêu Cầu</h2>
-                <p class="text-slate-400">Hãy điền thông tin dự án của bạn, tôi sẽ phản hồi lại trong thời gian sớm nhất.</p>
+                <h2 class="text-3xl font-bold mb-3">Kết Nối Trực Tiếp</h2>
+                <p class="text-slate-400">Liên hệ qua các kênh dưới đây để nhận hỗ trợ và tư vấn nhanh nhất.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Contact info -->
-                <div class="space-y-6">
-                    <div class="bg-cybercard border border-cyberborder p-6 rounded-2xl">
-                        <div class="w-10 h-10 rounded-lg bg-cybercyan/10 text-cybercyan flex items-center justify-center text-lg mb-4">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-sm mb-1">Email</h4>
-                        <p class="text-slate-400 text-xs">luvanthai.security@gmail.com</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-cybercard border border-cyberborder p-8 rounded-2xl flex items-center space-x-6 glow-hover transition">
+                    <div class="w-14 h-14 rounded-2xl bg-cybergreen/10 text-cybergreen border border-cybergreen/30 flex items-center justify-center text-2xl shrink-0">
+                        <i class="fa-brands fa-telegram"></i>
                     </div>
-                    <div class="bg-cybercard border border-cyberborder p-6 rounded-2xl">
-                        <div class="w-10 h-10 rounded-lg bg-cybergreen/10 text-cybergreen flex items-center justify-center text-lg mb-4">
-                            <i class="fa-brands fa-telegram"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-sm mb-1">Telegram</h4>
-                        <p class="text-slate-400 text-xs">@Tmeiamzx4n7h41</p>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">Telegram (Ưu tiên)</h4>
+                        <p class="text-slate-400 text-sm mb-3">Nhắn tin trực tiếp phản hồi tức thì.</p>
+                        <a href="https://t.me/luvanthai" target="_blank" class="inline-flex items-center text-cybercyan text-sm font-semibold hover:underline">
+                            <span>Chat trên Telegram</span> &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <!-- Form -->
-                <div class="md:col-span-2 bg-cybercard border border-cyberborder p-8 rounded-3xl">
-                    <form onsubmit="handleSubmit(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Họ tên / Biệt danh của bạn</label>
-                            <input type="text" id="form-name" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Nhập tên của bạn...">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Email hoặc Số điện thoại / Telegram</label>
-                            <input type="text" id="form-contact" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Để tôi có thể liên hệ lại...">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Chi tiết yêu cầu / Dự án</label>
-                            <textarea id="form-message" rows="4" required class="w-full bg-cyberdark border border-cyberborder rounded-xl px-4 py-3 text-sm focus:border-cybercyan focus:outline-none" placeholder="Mô tả ngắn gọn yêu cầu công việc..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cybercyan to-cybergreen text-black font-bold text-sm hover:opacity-95 transition shadow-lg">
-                            Gửi Yêu Cầu Dịch Vụ
-                        </button>
-                    </form>
+                <div class="bg-cybercard border border-cyberborder p-8 rounded-2xl flex items-center space-x-6 glow-hover transition">
+                    <div class="w-14 h-14 rounded-2xl bg-cybercyan/10 text-cybercyan border border-cybercyan/30 flex items-center justify-center text-2xl shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">Email Liên Hệ</h4>
+                        <p class="text-slate-400 text-sm mb-3">Dành cho công việc & báo cáo chi tiết.</p>
+                        <a href="mailto:contact@luvanthai.id.vn" class="text-cybercyan text-sm font-semibold hover:underline">
+                            luvanthai@security@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -421,23 +409,29 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-cyberborder text-center text-xs text-slate-500 font-mono">
-        <p>&copy; 2026 Roy Duis. All rights reserved. Built with Security & Passion.</p>
+        <p>&copy; 2026 Lù Văn Thái. All rights reserved. Built with Security & Passion.</p>
     </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-cybercard border border-cybercyan text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-32 opacity-0 transition duration-300 flex items-center space-x-3">
-        <div class="text-cybercyan text-xl">
-            <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <div>
-            <h5 class="font-bold text-sm">Thành công!</h5>
-            <p id="toast-msg" class="text-xs text-slate-400">Yêu cầu của bạn đã được ghi nhận.</p>
-        </div>
-    </div>
 
     <!-- JavaScript functionality -->
     <script>
-        // Filter Services
+        // 🚨 CHÚ Ý: Đổi chữ "luvanthai" dưới đây thành Username Telegram chuẩn của bạn (không cần dấu @)
+        const TELEGRAM_USERNAME = "luvanthai"; 
+
+        // Hàm chuyển hướng thẳng sang Telegram kèm tin nhắn soạn sẵn
+        function sendToTelegram() {
+            const select = document.getElementById('calc-service');
+            const serviceName = select.options[select.selectedIndex].getAttribute('data-name') || select.options[select.selectedIndex].text;
+            const price = document.getElementById('total-price').innerText;
+            
+            const urgent = document.getElementById('opt-urgent').checked ? "%0A- Yêu cầu: Làm gấp trong 24h (+200k)" : "";
+            const report = document.getElementById('opt-report').checked ? "%0A- Yêu cầu: Báo cáo kỹ thuật chi tiết (+150k)" : "";
+
+            const message = `Chào Thái, tôi muốn tư vấn & đặt dịch vụ:%0A👉 *${serviceName}*%0A💰 Chi phí ước tính: *${price}*${urgent}${report}%0A%0AYêu cầu chi tiết của tôi là: `;
+
+            window.open(`https://t.me/${TELEGRAM_USERNAME}?text=${message}`, '_blank');
+        }
+
+        // Filter Services Tabs
         function filterService(category) {
             const cards = document.querySelectorAll('.service-card');
             const buttons = document.querySelectorAll('.filter-btn');
@@ -482,33 +476,6 @@
             }
             calculateTotal();
             document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function transferDataToContact() {
-            const select = document.getElementById('calc-service');
-            const serviceName = select.options[select.selectedIndex].getAttribute('data-name') || select.options[select.selectedIndex].text;
-            const price = document.getElementById('total-price').innerText;
-            
-            const urgent = document.getElementById('opt-urgent').checked ? " [Làm gấp]" : "";
-            const report = document.getElementById('opt-report').checked ? " [Báo cáo chi tiết]" : "";
-
-            document.getElementById('form-message').value = `Tôi muốn đăng ký dịch vụ: ${serviceName}${urgent}${report} với tổng chi phí ước tính khoảng ${price}.`;
-        }
-
-        // Form Submit Simulation
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('form-name').value;
-            
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-msg').innerText = `Cảm ơn ${name}! Yêu cầu đã được gửi thành công.`;
-            
-            toast.classList.remove('translate-y-32', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-32', 'opacity-0');
-            }, 4000);
-
-            e.target.reset();
         }
     </script>
 </body>
